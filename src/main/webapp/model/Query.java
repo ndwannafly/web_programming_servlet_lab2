@@ -1,4 +1,4 @@
-package main.webapp.entity;
+package main.webapp.model;
 
 import com.sun.istack.internal.NotNull;
 import main.webapp.exception.WLException;

@@ -5,10 +5,10 @@
   Time: 10:25 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="main.webapp.entity.Query" %>
+<%@ page import="main.webapp.model.Query" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="result" scope="session" class="main.webapp.entity.Result"></jsp:useBean>
+<jsp:useBean id="result" scope="session" class="main.webapp.model.Result"></jsp:useBean>
 <% result.setQueries((List<Query>) session.getServletContext().getAttribute("queries"));
     System.out.println(session.getServletContext().getAttribute("queries"));
 %>

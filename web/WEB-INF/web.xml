@@ -33,5 +33,14 @@
         <servlet-name>ResultServlet</servlet-name>
         <url-pattern>/data-result</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AreaCheckServlet</servlet-name>
+        <servlet-class>main.webapp.servlets.AreaCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AreaCheckServlet</servlet-name>
+        <url-pattern>/areaCheckServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
 

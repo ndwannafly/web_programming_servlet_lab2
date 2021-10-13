@@ -1,4 +1,4 @@
-package main.webapp.entity;
+package main.webapp.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
