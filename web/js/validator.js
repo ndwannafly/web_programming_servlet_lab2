@@ -53,24 +53,6 @@ window.onload = () => {
                 else window.location.href = "./result.jsp";
             }
         })
-        /*$.ajax({
-            type: "GET",
-            url: url,
-            success: () => {
-                board.create('point', [body.x, body.y], {
-                    color: 'green',
-                    label: {visible: false}
-                })
-                window.location.href = "./result.jsp";
-            },
-            error: () => {
-                board.create('point', [body.x, body.y], {
-                    color: 'red',
-                    label: {visible: false}
-                })
-                window.location.href = `./data-process?x=${body.x}&y=${body.y}&r=${body.r}`;
-            }
-        })*/
     }
 
     const getXY = (e, i) => {
