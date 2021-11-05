@@ -7,5 +7,8 @@ public class WLException {
     public static String INVALID_RADIUS_MESSAGE = "Radius is invalid! Please check the constraint";
     public static String METHOD_POST_IS_NOT_SUPPORTED = "Method Post is not supported";
     public static String INVALID_POINT_X_FORMAT = "Point X is invalid! Please insert a float number";
+    public static String INVALID_POINT_R_FORMAT = "Point R is invalid! Please insert a float number";
+
     public static String NULL_PARAM = "Parameters can not be null!";
+    public static String WRONG_LOGIN = "Username or Password is incorrect!";
 }

@@ -24,6 +24,28 @@
         </exception-type>
         <location>/error</location>
     </error-page>
+    
+    <servlet>
+        <servlet-name>controller</servlet-name>
+        <servlet-class>main.webapp.servlets.ControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>controller</servlet-name>
+        <url-pattern>/data-process</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>authenticationFilter</filter-name>
+        <filter-class>main.webapp.servlets.AuthorizationFilter</filter-class>
+        <init-param>
+            <param-name>code</param-name>
+            <param-value>Pizdets</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>authenticationFilter</filter-name>
+        <url-pattern>/data-process</url-pattern>
+    </filter-mapping>
 
     <servlet>
         <servlet-name>ResultServlet</servlet-name>
@@ -41,6 +63,42 @@
     <servlet-mapping>
         <servlet-name>AreaCheckServlet</servlet-name>
         <url-pattern>/areaCheckServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>tableJSP</servlet-name>
+        <jsp-file>/table.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>tableJSP</servlet-name>
+        <url-pattern>/table</url-pattern>
+    </servlet-mapping>
+
+<!--    <servlet>
+        <servlet-name>loginJSP</servlet-name>
+        <jsp-file>/login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginJSP</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>main.webapp.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/login-process</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>signupServlet</servlet-name>
+        <servlet-class>main.webapp.servlets.SignupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>signupServlet</servlet-name>
+        <url-pattern>/signup-process</url-pattern>
     </servlet-mapping>
 </web-app>
 

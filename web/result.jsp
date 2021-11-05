@@ -9,8 +9,8 @@
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="result" scope="session" class="main.webapp.model.Result"></jsp:useBean>
-<% result.setQueries((List<Query>) session.getServletContext().getAttribute("queries"));
-    System.out.println(session.getServletContext().getAttribute("queries"));
+<% result.setQueries((List<Query>) session.getAttribute("queries"));
+    System.out.println(session.getAttribute("queries"));
 %>
 <!DOCTYPE html>
 <html>
@@ -54,7 +54,7 @@
 </div>
 <script>
     function goBack() {
-        window.location.replace("/lab_2_war_exploded");
+        window.location.replace("/lab-2_war/table.jsp");
     }
 </script>
 </body>

@@ -33,10 +33,16 @@ public class Query implements Serializable {
         } catch (NumberFormatException e){
             throw new WebLabException(WLException.INVALID_POINT_X_FORMAT);
         }
-        this.y = Double.parseDouble(y);
-
-        this.r = Double.parseDouble(r);
-
+        try {
+            this.y = Double.parseDouble(y);
+        } catch (NumberFormatException e){
+            throw new WebLabException(WLException.INVALID_POINT_Y_MESSAGE);
+        }
+        try {
+            this.r = Double.parseDouble(r);
+        } catch(NumberFormatException e){
+            throw new WebLabException(WLException.INVALID_POINT_R_FORMAT);
+        }
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm dd:MM:yyyy");
 
         creationTime = LocalDateTime.now(ZoneId.of("UTC+3")).format(formatter);
